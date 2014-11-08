@@ -5,20 +5,20 @@ public class Categories {
 	private double weight;
 	private LinkedList assignments;
 	
-	public Categories(String Category_name, double Weight)
+	public Categories()
+	{
+		this.category_name = "";
+		this.weight = 0.0;
+	}
+	
+	public void set_Category_Type(String Category_name)
 	{
 		this.category_name = Category_name;
+	}
+	
+	public void set_Category_Percentage(double Weight) 
+	{
 		this.weight = Weight;
-	}
-	
-	public void set_Category_Type()
-	{
-		
-	}
-	
-	public void set_Category_Percentage(double percentage) 
-	{
-		
 	}
 	
 	public double get_Category_Percentage() {
