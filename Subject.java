@@ -30,15 +30,23 @@ public class Subject {
 		this.credit_hours = Credit_Hours;
 	}
 	
-	public void add_Category()
+	public void add_Category(String Name, double Weight)
 	{
-		Categories c;
-		
+		Categories C = new Categories();
+		C.set_Category_Type(Name);
+		C.set_Category_Percentage(Weight);
+		categories.add(C);
 	}
 	
 	public boolean is_complete()
 	{
-		return false;
+		int List_Size = categories.size();
+		double sum = 0;
+		for(int i = 0; i < List_Size; i++)
+		{
+			sum += categories.get(i).get_Category_Percentage();
+		}
+		return sum == 100.0;
 	}
 	
 	public String get_Subject_Name()
@@ -51,5 +59,15 @@ public class Subject {
 		return this.credit_hours;
 	}
 	
+	public double Calculate_Grade() 
+	{
+		int total_categories = categories.size();
+		double grade = 0;
+		for(int i = 0; i < total_categories; i++)
+		{
+			score += categories.get(i).Calculate_Score()*categories.get(i).get_Category_Percentage();
+		}
+		return score;
+	}
 	
 }
