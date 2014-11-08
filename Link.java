@@ -2,22 +2,25 @@ import java.util.Scanner;
 
 public class Link
 {
-	public double gradePercent;
+	public double pointsEarned;
+	public double pointsPossible;
 	public double gradeWeight;
 	
 	public Link next;
 	
-	public Link(double gradePercent, double gradeWeight)
+	public Link(double pointsEarned, double pointsPossible, double gradeWeight)
 	{
-		this.gradePercent = gradePercent;
+		this.pointsEarned = pointsEarned;
+		this.pointsPossible = pointsPossible;
 		this.gradeWeight = gradeWeight;
 	}
 	
+	
 	public void display()
 	{
-		System.out.println(gradePercent + " " + gradeWeight);
+		System.out.println(pointsEarned + " " + pointsPossible + " " gradeWeight);
 	}
-
+	
 	public static void main(String[] args)
 	{
 		LinkList theLinkedList = new LinkList();
@@ -27,14 +30,16 @@ public class Link
 		int numGrades = in.nextInt();
 		
 		System.out.print("Enter grade followed by overall weight for all " + numGrades + " grade(s): ");
-		double percent = 0;
+		double pointsE = 0;
+		double pointsP = 0;
 		double weight = 0;
 		
 		while(numGrades > 0)
 		{
-			percent = in.nextDouble();
+			pointsE = in.nextDouble();
+			pointsP = in.nextDouble();
 			weight = in.nextDouble();
-			theLinkedList.insertFirstLink(percent, weight);
+			theLinkedList.insertFirstLink(pointsE, pointsP, weight);
 			numGrades--;
 		}
 		
@@ -60,9 +65,9 @@ class LinkList
 	}
 	
 	
-	public void insertFirstLink(double gradePercent, double gradeWeight)
+	public void insertFirstLink(double pointsEarned, double pointsPossible, double gradeWeight)
 	{
-		Link newLink = new Link(gradePercent, gradeWeight);
+		Link newLink = new Link(pointsEarned, pointsPossible, gradeWeight);
 		newLink.next = firstLink;
 		firstLink = newLink;
 	}
@@ -105,7 +110,7 @@ class LinkList
 		
 		while(theLink != null)
 		{
-			totalGrade += theLink.gradePercent * (theLink.gradeWeight / 100);
+			totalGrade += (theLink.pointsEarned / theLink.pointsPossible) * (theLink.gradeWeight);
 			theLink = theLink.next;
 		}
 		System.out.println("Total grade: " + totalGrade + "%");
