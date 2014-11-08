@@ -19,5 +19,34 @@
 
     </ListView>
 
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="2">
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Go Back!"
+            android:id="@+id/backButtonCategory"
+            android:paddingLeft="30dp"
+            android:paddingRight="30dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_gravity="bottom"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Save Category"
+            android:id="@+id/saveCatButton"
+            android:paddingLeft="30dp"
+            android:paddingRight="30dp"
+            android:layout_alignBottom="@+id/backButtonCategory"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_gravity="center|bottom"/>
+    </LinearLayout>
+
 
 </LinearLayout>

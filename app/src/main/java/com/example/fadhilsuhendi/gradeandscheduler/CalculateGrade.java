@@ -8,6 +8,7 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
+import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -33,7 +34,7 @@ public class CalculateGrade extends ActionBarActivity {
     ArrayList<String> courseAddList = new ArrayList<String>(); // create arraylist for string(course)
     private Button backButton = null;
     private Button saveButton = null;
-    private Button addCourseButton =null;
+    private Button addCourseButton = null;
     private ListView courseList = null;
     private ArrayAdapter arrayAdapter = null;
     private Context mContext = null;
@@ -67,6 +68,8 @@ public class CalculateGrade extends ActionBarActivity {
 
         // function to listView for array adapter
         courseList = (ListView) findViewById(R.id.addCourseList);
+        // making each list of items is clickable to the next layout
+        courseList.setClickable(true);
         // this will connect from array adapter to the listview
         arrayAdapter = new ArrayAdapter(this,android.R.layout.simple_list_item_1,courseAddList);
 
@@ -88,7 +91,9 @@ public class CalculateGrade extends ActionBarActivity {
                 alert.setPositiveButton("Ok",new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialogInterface, int i) {
+
                         String result = input.getText().toString();
+
                         Toast.makeText(CalculateGrade.this,result,Toast.LENGTH_LONG).show(); // simple feedback for operational
                         courseAddList.add(result);
                         courseList.invalidate(); // get new information
@@ -101,15 +106,19 @@ public class CalculateGrade extends ActionBarActivity {
             }
         });
 
-        courseList.setClickable(true);
 
         courseList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                Log.d("Calculate","ITs in here"); // log console
                 if(i == 0) {
                     Intent int0 = new Intent(CalculateGrade.this,Category.class); // method?
                     startActivity(int0);
                 }
+                else if(i == 1) {
+
+                }
+
             }
         });
 
