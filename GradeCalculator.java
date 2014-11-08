@@ -1,14 +1,13 @@
 import java.util.Scanner;
+import java.LinkList;
 
-public class Link
+public class Category
 {
 	public double pointsEarned;
 	public double pointsPossible;
 	public double gradeWeight;
 	
-	public Link next;
-	
-	public Link(double pointsEarned, double pointsPossible, double gradeWeight)
+	public Subject(double pointsEarned, double pointsPossible, double gradeWeight)
 	{
 		this.pointsEarned = pointsEarned;
 		this.pointsPossible = pointsPossible;
@@ -52,7 +51,7 @@ public class Link
 
 class LinkList
 {
-	public Link firstLink;
+	public Subject firstLink;
 	
 	LinkList() 
 	{
@@ -67,15 +66,15 @@ class LinkList
 	
 	public void insertFirstLink(double pointsEarned, double pointsPossible, double gradeWeight)
 	{
-		Link newLink = new Link(pointsEarned, pointsPossible, gradeWeight);
+		Subject newLink = new Subject(pointsEarned, pointsPossible, gradeWeight);
 		newLink.next = firstLink;
 		firstLink = newLink;
 	}
 	
 	//Removes first link
-	public Link removeFirst()
+	public Subject removeFirst()
 	{
-		Link linkReference = firstLink;
+		Subject linkReference = firstLink;
 		
 		if(!isEmpty())
 		{
@@ -92,12 +91,12 @@ class LinkList
 	//Display everything in list until we hit nullptr
 	public void display()
 	{
-		Link theLink = firstLink;
+		Subject theLink = firstLink;
 		
 		while(theLink != null)
 		{
 			theLink.display();
-			//System.out.println("Next Link: " + theLink.next);
+			//System.out.println("Next Subject: " + theLink.next);
 			theLink = theLink.next;
 			System.out.println();
 		}
@@ -105,7 +104,7 @@ class LinkList
 
 	public double totalGrade()
 	{
-		Link theLink = firstLink;
+		Subject theLink = firstLink;
 		double totalGrade = 0; 
 		
 		while(theLink != null)
@@ -118,9 +117,9 @@ class LinkList
 	}
 	
 	/*
-	public Link find(double category)
+	public Subject find(double category)
 	{
-		Link theLink = firstLink;
+		Subject theLink = firstLink;
 		if(!isEmpty())
 		{
 			while(theLink.category != category)
@@ -143,10 +142,10 @@ class LinkList
 		return theLink;
 	}
 	
-	public Link removeLink(String category)
+	public Subject removeLink(String category)
 	{
-		Link currentLink = firstLink;
-		Link previousLink = firstLink;
+		Subject currentLink = firstLink;
+		Subject previousLink = firstLink;
 		
 		while(currentLink.category != category)
 		{

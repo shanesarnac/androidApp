@@ -16,7 +16,7 @@ public class MyActivity extends ActionBarActivity {
     private Button nextButton = null;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) { // call back method that will be called during the apps is running
+    protected void onCreate(Bundle savedInstanceState) { // call back method that will be called while the apps is running
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_my);
 
