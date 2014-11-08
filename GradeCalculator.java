@@ -1,13 +1,15 @@
 import java.util.Scanner;
-import java.LinkList;
+import java.util.LinkedList;
 
-public class Category
+public class GradeCalculator
 {
 	public double pointsEarned;
 	public double pointsPossible;
 	public double gradeWeight;
 	
-	public Subject(double pointsEarned, double pointsPossible, double gradeWeight)
+	public GradeCalculator next;
+	
+	public GradeCalculator(double pointsEarned, double pointsPossible, double gradeWeight)
 	{
 		this.pointsEarned = pointsEarned;
 		this.pointsPossible = pointsPossible;
@@ -17,7 +19,7 @@ public class Category
 	
 	public void display()
 	{
-		System.out.println(pointsEarned + " " + pointsPossible + " " gradeWeight);
+		//System.out.println(pointsEarned + " " + pointsPossible + " " gradeWeight);
 	}
 	
 	public static void main(String[] args)
@@ -51,7 +53,7 @@ public class Category
 
 class LinkList
 {
-	public Subject firstLink;
+	public GradeCalculator firstLink;
 	
 	LinkList() 
 	{
@@ -66,15 +68,15 @@ class LinkList
 	
 	public void insertFirstLink(double pointsEarned, double pointsPossible, double gradeWeight)
 	{
-		Subject newLink = new Subject(pointsEarned, pointsPossible, gradeWeight);
+		GradeCalculator newLink = new GradeCalculator(pointsEarned, pointsPossible, gradeWeight);
 		newLink.next = firstLink;
 		firstLink = newLink;
 	}
 	
 	//Removes first link
-	public Subject removeFirst()
+	public GradeCalculator removeFirst()
 	{
-		Subject linkReference = firstLink;
+		GradeCalculator linkReference = firstLink;
 		
 		if(!isEmpty())
 		{
@@ -91,7 +93,7 @@ class LinkList
 	//Display everything in list until we hit nullptr
 	public void display()
 	{
-		Subject theLink = firstLink;
+		GradeCalculator theLink = firstLink;
 		
 		while(theLink != null)
 		{
@@ -104,7 +106,7 @@ class LinkList
 
 	public double totalGrade()
 	{
-		Subject theLink = firstLink;
+		GradeCalculator theLink = firstLink;
 		double totalGrade = 0; 
 		
 		while(theLink != null)
@@ -117,9 +119,9 @@ class LinkList
 	}
 	
 	/*
-	public Subject find(double category)
+	public GradeCalculator find(double category)
 	{
-		Subject theLink = firstLink;
+		GradeCalculator theLink = firstLink;
 		if(!isEmpty())
 		{
 			while(theLink.category != category)
@@ -142,10 +144,10 @@ class LinkList
 		return theLink;
 	}
 	
-	public Subject removeLink(String category)
+	public GradeCalculator removeLink(String category)
 	{
-		Subject currentLink = firstLink;
-		Subject previousLink = firstLink;
+		GradeCalculator currentLink = firstLink;
+		GradeCalculator previousLink = firstLink;
 		
 		while(currentLink.category != category)
 		{
