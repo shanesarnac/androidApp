@@ -16,6 +16,42 @@ public class GradeCalculator
 		this.gradeWeight = gradeWeight;
 	}
 	
+	public void Create_New_subject()
+	{
+		Subject p = new Subject();
+		Scanner in = new Scanner(System.in);
+		String choice = "";
+		String className = "";
+		while(choice != "q")
+		{
+			System.out.println("Enter name of class: ");
+			className = in.nextLine();
+			System.out.println("You entered: " + className + " is this correct? (y/n) ");
+			choice = in.nextLine();
+			if(choice == "y")
+				choice = "q";
+		}
+		
+		p.set_Class_Name(className);
+		while(p.is_complete() == false)
+		{
+			p.add_Category();
+		}
+		p.Save_Subject();
+		//Calculate(p);
+	}
+	
+	public void Load_Subject()
+	{
+		Subject p = new Subject();
+		p.Load_Subject();
+		//Calculate(p);
+	}
+	
+	public void Calculate(Subject p)
+	{
+		//p.totalGrade();
+	}
 	
 	public void display()
 	{
