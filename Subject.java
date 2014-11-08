@@ -59,5 +59,15 @@ public class Subject {
 		return this.credit_hours;
 	}
 	
+	public double Calculate_Grade() 
+	{
+		int total_categories = categories.size();
+		double grade = 0;
+		for(int i = 0; i < total_categories; i++)
+		{
+			score += categories.get(i).Calculate_Score()*categories.get(i).get_Category_Percentage();
+		}
+		return score;
+	}
 	
 }

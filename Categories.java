@@ -40,6 +40,20 @@ public class Categories {
 		return category_name;
 	}
 	
+	public double Calculate_Score()
+	{
+		double total_points_earned = 0;
+		double total_points_available = 0;
+		double score;
+		int total_Assignments = assignments.size();
+		for(int i = 0; i < total_Assignments; i++)
+		{
+			total_points_earned += assignments.get(i).get_Points_Earned();
+			total_points_available += assignments.get(i).get_Points_Possible();
+		}
+		score = total_points_earned/ total_points_available;
+		return score;
+	}
 	
 	
 }
