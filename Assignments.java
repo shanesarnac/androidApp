@@ -7,7 +7,6 @@ public class Assignments {
 	
 	public Assignments() 
 	{
-		this.title = Title;
 		this.points_earned = 0;
 		this.points_possible = 1;
 	}
