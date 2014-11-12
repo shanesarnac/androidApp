@@ -4,6 +4,8 @@ import java.util.LinkedList;
 public class Categories {
 	private String category_name;
 	private double weight;
+	private int assignment_count = 0;
+	private double total_points_earned, total_points_possible;
 	private LinkedList<Assignments> assignments = new LinkedList<Assignments>();
 	
 	public Categories()
@@ -19,7 +21,24 @@ public class Categories {
 		A.set_Points_Possible(Points_Possible);
 		A.set_Complete(Complete);
 		assignments.add(A);
-		
+		assignment_count++;
+		total_points_earned += Points_Earned;
+		total_points_possible += Points_Possible;
+	}
+	
+	public void remove_Assignment(int index)
+	{
+		assignments.remove(index);
+		assignment_count--;
+	}
+	
+	public void remove_All_Assignments()
+	{
+		if(assignment_count != 0)
+		{
+			remove_Assignment(assignment_count - 1);
+			remove_All_Assignments();
+		}
 	}
 	
 	public void set_Category_Type(String Category_name)
@@ -27,41 +46,32 @@ public class Categories {
 		this.category_name = Category_name;
 	}
 	
-	public void set_Category_Percentage(double Weight) 
+	public void set_Category_Weight(double Weight) 
 	{
 		this.weight = Weight;
 	}
 	
-	public double get_Category_Percentage() {
-		return weight;
+	public void set_Totals(double Points_Earned, double Points_Possible)
+	{
+		remove_All_Assignments();
+		total_points_earned = Points_Earned;
+		total_points_possible = Points_Possible;
 	}
-	
-	public String get_Category_Type() 
+		
+	public String get_Category_Name() 
 	{
 		return category_name;
 	}
 	
-	public double Calculate_Score()
+	public double get_Category_Weight()
 	{
-		double total_points_earned = 0;
-		double total_points_available = 0;
-		double score;
-		int total_Assignments = assignments.size();
-		if(total_Assignments == 0)
-		{
-			return 0.0;
-		}
-		for(int i = 0; i < total_Assignments; i++)
-		{
-			if(assignments.get(i).is_Complete() == true)
-			{
-				total_points_earned += assignments.get(i).get_Points_Earned();
-				total_points_available += assignments.get(i).get_Points_Possible();
-			}
-		}
-		score = total_points_earned/ total_points_available;
-		return score;
+		return weight;
 	}
 	
+	public double get_Percent_Earned()
+	{
+		return total_points_earned/total_points_possible;
+	}
 	
+
 }

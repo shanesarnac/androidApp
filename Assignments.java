@@ -48,7 +48,7 @@ public class Assignments {
 		return this.points_possible;
 	}
 	
-	public is_Complete()
+	public boolean is_Complete()
 	{
 		return complete;
 	}
