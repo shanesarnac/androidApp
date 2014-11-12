@@ -11,12 +11,13 @@ public class Categories {
 		this.weight = 0.0;
 	}
 	
-	public void add_Assignment(String Name, double Points_Earned, double Points_Possible)
+	public void add_Assignment(String Name, double Points_Earned, double Points_Possible, boolean Complete)
 	{
 		Assignments A = new Assignments();
 		A.set_Name(Name);
 		A.set_Points_Earned(Points_Earned);
 		A.set_Points_Possible(Points_Possible);
+		A.set_Complete(Complete);
 		assignments.add(A);
 		
 	}
@@ -52,8 +53,11 @@ public class Categories {
 		}
 		for(int i = 0; i < total_Assignments; i++)
 		{
-			total_points_earned += assignments.get(i).get_Points_Earned();
-			total_points_available += assignments.get(i).get_Points_Possible();
+			if(assignments.get(i).is_Complete() == true)
+			{
+				total_points_earned += assignments.get(i).get_Points_Earned();
+				total_points_available += assignments.get(i).get_Points_Possible();
+			}
 		}
 		score = total_points_earned/ total_points_available;
 		return score;

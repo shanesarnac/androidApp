@@ -4,6 +4,8 @@ public class Assignments {
 	String title;
 	double points_earned;
 	double points_possible;
+	boolean complete;
+	
 	
 	public Assignments() 
 	{
@@ -26,6 +28,11 @@ public class Assignments {
 		this.points_possible = Points_Possible;
 	}
 	
+	public void set_Complete(boolean Complete)
+	{
+		this.complete = Complete;
+	}
+	
 	public String get_Title()
 	{
 		return this.title;
@@ -39,5 +46,10 @@ public class Assignments {
 	public double get_Points_Possible ()
 	{
 		return this.points_possible;
+	}
+	
+	public is_Complete()
+	{
+		return complete;
 	}
 }
