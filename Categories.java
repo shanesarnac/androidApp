@@ -4,7 +4,7 @@ import java.util.LinkedList;
 public class Categories {
 	private String category_name;
 	private double weight;
-	private LinkedList<Assignments> assignments;
+	private LinkedList<Assignments> assignments = new LinkedList<Assignments>();
 	
 	public Categories()
 	{
@@ -46,6 +46,10 @@ public class Categories {
 		double total_points_available = 0;
 		double score;
 		int total_Assignments = assignments.size();
+		if(total_Assignments == 0)
+		{
+			return 0.0;
+		}
 		for(int i = 0; i < total_Assignments; i++)
 		{
 			total_points_earned += assignments.get(i).get_Points_Earned();
