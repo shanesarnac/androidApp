@@ -37,7 +37,7 @@ public class GradeCalculator
 		Scanner in = new Scanner(System.in);
 		String choice = "";
 		String categoryName = "";
-		double Weight = 0.0;
+		double Weight = 0.0; 
 		
 		while(choice != "q" && subject.is_complete() == false)
 		{
@@ -86,10 +86,10 @@ public class GradeCalculator
 		{
 			System.out.println("Enter the name of the assignment");
 			assignmentName = in.nextLine();
-			System.out.println("Enter the number of points that can be earned in this assignment");
-			points_possible = Double.parseDouble(in.nextLine());
 			System.out.println("Enter the number of points earned on this assignment");
 			points_earned = Double.parseDouble(in.nextLine());
+			System.out.println("Enter the number of points that can be earned in this assignment");
+			points_possible = Double.parseDouble(in.nextLine());
 			System.out.print("You entered: " + assignmentName + " for the name of the assignment, "); 
 			System.out.print(points_possible + " for the total number of points possible, and ");
 			System.out.println(points_earned + " for the number of points earned on the assignment. ");

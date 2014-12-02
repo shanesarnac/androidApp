@@ -1,10 +1,11 @@
 import java.util.LinkedList;
 
 public class Subject {
-	private String classname;
+	private String class_name;
 	private int credit_hours;
 	private int category_count;
 	private LinkedList<Categories> categories = new LinkedList<Categories>();
+	private LinkedList<Schedule> schedule = new LinkedList<Schedule>();
 	
 	public Subject()
 	{
@@ -23,7 +24,7 @@ public class Subject {
 	
 	public void set_Class_Name(String ClassName)
 	{
-		this.classname = ClassName;
+		this.class_name = ClassName;
 	}
 	
 	public void set_Credit_Hours(int Credit_Hours)
@@ -53,13 +54,12 @@ public class Subject {
 	
 	public boolean is_complete()
 	{
-		System.out.println("The Percent complete so far is " + this.get_Percent_Complete());
 		return this.get_Percent_Complete() == 100.0;
 	}
 	
 	public String get_Subject_Name()
 	{
-		return this.classname;
+		return this.class_name;
 	}
 	
 	public int get_Credit_Hours()
