@@ -1,5 +1,18 @@
 import java.util.LinkedList;
 
+/** Subject.java 
+ * 
+ *  @author Shane Sarnac, Fadhil Suhendi, Dan Wallin
+ *  <hr> 									
+ *  @date Originally created: 10/19/2014 									
+ *  @modified Modified on: 12/2/2014 (added self-documenting code)
+ * 	
+ *  <hr>
+ * 
+ *  @section desc Description
+ *  This files is used to create a Subject Class, add weights and calculate total grade for that subject. 
+ */ 
+
 public class Subject {
 	private String classname;
 	private int credit_hours;

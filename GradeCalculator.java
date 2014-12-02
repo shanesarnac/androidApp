@@ -8,7 +8,7 @@ import java.util.LinkedList;
  *  @date Originally created: 10/19/2014 									
  *  @modified Modified on: 11/29/2014 (added self-documenting code)
  * 	
- * <hr>
+ *  <hr>
  * 
  *  @section desc Description
  *  This files uses the Subject, Assignments and Categories classes in order to calculate the user's overall grade. 
