@@ -1,5 +1,18 @@
 import java.util.LinkedList;
 
+/** Subject.java 
+ * 
+ *  @author Shane Sarnac, Fadhil Suhendi, Dan Wallin
+ *  <hr> 									
+ *  @date Originally created: 10/19/2014 									
+ *  @modified Modified on: 12/2/2014 (added self-documenting code)
+ * 	
+ *  <hr>
+ * 
+ *  @section desc Description
+ *  This files is used to create a Subject Class, add weights and calculate total grade for that subject. 
+ */ 
+
 public class Subject {
 	private String class_name;
 	private int credit_hours;
@@ -32,6 +45,12 @@ public class Subject {
 		this.credit_hours = Credit_Hours;
 	}
 	
+	
+	/**
+	 * This method creates a Categories class given the Name and weight of said category. It then adds this Category to the 
+	 * the list of other categories. 
+	 * @param Weight the percentage weight of the category
+	 * */
 	public void add_Category(String Name, double Weight)
 	{
 		Categories C = new Categories();
@@ -41,17 +60,16 @@ public class Subject {
 		category_count++;
 	}
 	
-	public void add_Category(Categories category)
-	{
-		categories.add(category);
-		category_count++;
-	}
-	
 	public void remove_Category(int index)
 	{
 		categories.remove(index);
 	}
 	
+	
+	/**
+	 * This method is used to determine whether or not the total weight of the subject has reached 100 percent.
+	 * @return returns either true or false depending on whether the weight is at 100 or not.
+	 * */
 	public boolean is_complete()
 	{
 		return this.get_Percent_Complete() == 100.0;
@@ -77,6 +95,11 @@ public class Subject {
 		return categories.get(i);
 	}
 	
+	
+	/**
+	 * This method sums the percent weight of the subject that the user has entered so far.
+	 * @return sum the total percentage weight of the subject so far
+	 * */
 	public double get_Percent_Complete()
 	{
 		double sum = 0;
@@ -87,6 +110,11 @@ public class Subject {
 		return sum;
 	}
 	
+	
+	/**
+	 * This method utilizes a for loop to calculate the total grade in a given subject.
+	 * @return grade returns overall grade for the subject
+	 * */
 	public double Calculate_Grade() 
 	{
 		int total_categories = categories.size();
@@ -101,5 +129,4 @@ public class Subject {
 		}
 		return grade;
 	}
-	
 }

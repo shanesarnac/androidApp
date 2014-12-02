@@ -1,8 +1,26 @@
 import java.util.Scanner;
 import java.util.LinkedList;
 
+/** @mainpage GradeCalculator.java 
+ * 
+ *  @author Shane Sarnac, Fadhil Suhendi, Dan Wallin
+ *  <hr> 									
+ *  @date Originally created: 10/19/2014 									
+ *  @modified Modified on: 11/29/2014 (added self-documenting code)
+ * 	
+ *  <hr>
+ * 
+ *  @section desc Description
+ *  This files uses the Subject, Assignments and Categories classes in order to calculate the user's overall grade. 
+ */ 
+
+
 public class GradeCalculator
-{	
+{
+	/**
+	* This method creates a new Subject class with the name provided by the user.
+	* @param className the class name entered by the user
+	* */	
 	public static void Create_New_subject()
 	{
 		Subject subject = new Subject();
@@ -32,6 +50,11 @@ public class GradeCalculator
 		Calculate(subject);
 	}
 	
+	/**
+	 * This method adds a category (or multiple categories) as well as the weights of each category in a given subject,
+	 * then puts this information in the Categories class.
+	 * @param Weight the percentage weight of the category
+	 * */
 	public static void Add_Category(Subject subject)
 	{
 		Scanner in = new Scanner(System.in);
@@ -52,7 +75,7 @@ public class GradeCalculator
 			if(choice.equals("y")) 
 			{
 				Categories category = new Categories();
-				category.set_Category_Type(categoryName);;
+				category.set_Category_Type(categoryName);
 				category.set_Category_Weight(Weight);
 				subject.add_Category(category);
 				System.out.println("Would you like to add (1) Completed Assignments, (2) Enter Category totals, (3) skip this step? ");
@@ -74,6 +97,12 @@ public class GradeCalculator
 		}
 	}
 	
+	/**
+	 * This method adds an assignment (or multiple assignments) within a category, and puts this information in the 
+	 * Assignments class.
+	 * @param points_possible total points available on an assignment.
+	 * @param points_earned points earned by the student on the given assignment.
+	 * */
 	public static void Add_Assignment(Categories category)
 	{
 		Scanner in = new Scanner(System.in);
@@ -108,6 +137,10 @@ public class GradeCalculator
 		}
 	}
 	
+	/**
+	 * Instead of adding individual assignments to a category, this method adds total points earned 
+	 * and total points available across all assignments.
+	 * */
 	public static void Set_Category_Totals(Categories category)
 	{
 		Scanner in = new Scanner(System.in);
