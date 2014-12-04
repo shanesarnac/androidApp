@@ -1,5 +1,17 @@
-
 import java.util.LinkedList;
+
+/** Categories.java
+ * 
+ *  @author Shane Sarnac, Fadhil Suhendi, Dan Wallin
+ *  <hr> 									
+ *  @date Originally created: 10/19/2014 									
+ *  @modified Modified on: 12/3/2014 (added self-documenting code)
+ * 	
+ *  <hr>
+ * 
+ *  @section desc Description
+ *  This files is used in order to set assignment point totals for a given category.
+ */ 
 
 public class Categories {
 	private String category_name;
@@ -13,6 +25,11 @@ public class Categories {
 		this.weight = 0.0;
 	}
 	
+	/**
+	 * This method adds a new assignment as well as points earned and points possible for that assignment
+	 * to a given category by utilizing the Assignments class. 
+	 * @param assignment_count is incremented each time that a new assignment is added to a category
+	 * */
 	public void add_Assignment(String Name, double Points_Earned, double Points_Possible, boolean Complete)
 	{
 		Assignments A = new Assignments();
@@ -26,12 +43,21 @@ public class Categories {
 		total_points_possible += Points_Possible;
 	}
 	
+	
+	/**
+	 * This method simply removes an assignment whose information was entered incorrectly then decrements assignment count.  
+	 * */
 	public void remove_Assignment(int index)
 	{
 		assignments.remove(index);
 		assignment_count--;
 	}
 	
+	
+	/**
+	 * This method removes all assignments using recursion.  
+	 * @param 
+	 * */
 	public void remove_All_Assignments()
 	{
 		if(assignment_count != 0)
@@ -51,6 +77,11 @@ public class Categories {
 		this.weight = Weight;
 	}
 	
+	
+	/**
+	 * This method is used to set the total points earned and total points possible for a given category. It first removes any
+	 * assignments that were previously added.
+	 * */
 	public void set_Totals(double Points_Earned, double Points_Possible)
 	{
 		remove_All_Assignments();
@@ -72,6 +103,4 @@ public class Categories {
 	{
 		return total_points_earned/total_points_possible;
 	}
-	
-
 }
