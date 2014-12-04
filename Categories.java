@@ -55,8 +55,7 @@ public class Categories {
 	
 	
 	/**
-	 * This method removes all assignments using recursion.  
-	 * @param 
+	 * This method removes all assignments using recursion.   
 	 * */
 	public void remove_All_Assignments()
 	{

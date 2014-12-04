@@ -1,0 +1,90 @@
+\hypertarget{class_categories}{\section{Categories Class Reference}
+\label{class_categories}\index{Categories@{Categories}}
+}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_categories_a8d3a1d8c0e92d597ab14871ee109a327}{add\-\_\-\-Assignment} (String Name, double Points\-\_\-\-Earned, double Points\-\_\-\-Possible, boolean Complete)
+\item 
+void \hyperlink{class_categories_abebb00d8f24619086f2aec4dad976678}{remove\-\_\-\-Assignment} (int index)
+\item 
+void \hyperlink{class_categories_a4a5f4a06f7617c1db359a6e0792cf1de}{remove\-\_\-\-All\-\_\-\-Assignments} ()
+\item 
+\hypertarget{class_categories_a3c0c37573c975789bfdb08a78c99e292}{void {\bfseries set\-\_\-\-Category\-\_\-\-Type} (String Category\-\_\-name)}\label{class_categories_a3c0c37573c975789bfdb08a78c99e292}
+
+\item 
+\hypertarget{class_categories_a15a4c950bc4bcb00a97e40a8f96196e7}{void {\bfseries set\-\_\-\-Category\-\_\-\-Weight} (double Weight)}\label{class_categories_a15a4c950bc4bcb00a97e40a8f96196e7}
+
+\item 
+void \hyperlink{class_categories_aa765331d80b829970f464da4dd88ada3}{set\-\_\-\-Totals} (double Points\-\_\-\-Earned, double Points\-\_\-\-Possible)
+\item 
+\hypertarget{class_categories_ae245339197b51c434f2d04469c157569}{String {\bfseries get\-\_\-\-Category\-\_\-\-Name} ()}\label{class_categories_ae245339197b51c434f2d04469c157569}
+
+\item 
+\hypertarget{class_categories_a86ac0cb1651f30595edf85c72bc890a5}{double {\bfseries get\-\_\-\-Category\-\_\-\-Weight} ()}\label{class_categories_a86ac0cb1651f30595edf85c72bc890a5}
+
+\item 
+\hypertarget{class_categories_ad981e983f17cc095700120dee18b3d95}{double {\bfseries get\-\_\-\-Percent\-\_\-\-Earned} ()}\label{class_categories_ad981e983f17cc095700120dee18b3d95}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Categories.\-java
+
+\begin{DoxyAuthor}{Author}
+Shane Sarnac, Fadhil Suhendi, Dan Wallin 
+
+ 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+Originally created\-: 10/19/2014  Modified on\-: 12/3/2014 (added self-\/documenting code)
+\end{DoxyDate}
+
+
+\hypertarget{index_desc}{}\subsection{Description}\label{index_desc}
+This files is used in order to set assignment point totals for a given category. 
+
+\subsection{Member Function Documentation}
+\hypertarget{class_categories_a8d3a1d8c0e92d597ab14871ee109a327}{\index{Categories@{Categories}!add\-\_\-\-Assignment@{add\-\_\-\-Assignment}}
+\index{add\-\_\-\-Assignment@{add\-\_\-\-Assignment}!Categories@{Categories}}
+\subsubsection[{add\-\_\-\-Assignment}]{\setlength{\rightskip}{0pt plus 5cm}void Categories.\-add\-\_\-\-Assignment (
+\begin{DoxyParamCaption}
+\item[{String}]{Name, }
+\item[{double}]{Points\-\_\-\-Earned, }
+\item[{double}]{Points\-\_\-\-Possible, }
+\item[{boolean}]{Complete}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_categories_a8d3a1d8c0e92d597ab14871ee109a327}
+This method adds a new assignment as well as points earned and points possible for that assignment to a given category by utilizing the \hyperlink{class_assignments}{Assignments} class. 
+\begin{DoxyParams}{Parameters}
+{\em assignment\-\_\-count} & is incremented each time that a new assignment is added to a category \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_categories_a4a5f4a06f7617c1db359a6e0792cf1de}{\index{Categories@{Categories}!remove\-\_\-\-All\-\_\-\-Assignments@{remove\-\_\-\-All\-\_\-\-Assignments}}
+\index{remove\-\_\-\-All\-\_\-\-Assignments@{remove\-\_\-\-All\-\_\-\-Assignments}!Categories@{Categories}}
+\subsubsection[{remove\-\_\-\-All\-\_\-\-Assignments}]{\setlength{\rightskip}{0pt plus 5cm}void Categories.\-remove\-\_\-\-All\-\_\-\-Assignments (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_categories_a4a5f4a06f7617c1db359a6e0792cf1de}
+This method removes all assignments using recursion. \hypertarget{class_categories_abebb00d8f24619086f2aec4dad976678}{\index{Categories@{Categories}!remove\-\_\-\-Assignment@{remove\-\_\-\-Assignment}}
+\index{remove\-\_\-\-Assignment@{remove\-\_\-\-Assignment}!Categories@{Categories}}
+\subsubsection[{remove\-\_\-\-Assignment}]{\setlength{\rightskip}{0pt plus 5cm}void Categories.\-remove\-\_\-\-Assignment (
+\begin{DoxyParamCaption}
+\item[{int}]{index}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_categories_abebb00d8f24619086f2aec4dad976678}
+This method simply removes an assignment whose information was entered incorrectly then decrements assignment count. \hypertarget{class_categories_aa765331d80b829970f464da4dd88ada3}{\index{Categories@{Categories}!set\-\_\-\-Totals@{set\-\_\-\-Totals}}
+\index{set\-\_\-\-Totals@{set\-\_\-\-Totals}!Categories@{Categories}}
+\subsubsection[{set\-\_\-\-Totals}]{\setlength{\rightskip}{0pt plus 5cm}void Categories.\-set\-\_\-\-Totals (
+\begin{DoxyParamCaption}
+\item[{double}]{Points\-\_\-\-Earned, }
+\item[{double}]{Points\-\_\-\-Possible}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_categories_aa765331d80b829970f464da4dd88ada3}
+This method is used to set the total points earned and total points possible for a given category. It first removes any assignments that were previously added. 
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+Categories.\-java\end{DoxyCompactItemize}
