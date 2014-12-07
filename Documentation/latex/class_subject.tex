@@ -1,0 +1,108 @@
+\hypertarget{class_subject}{\section{Subject Class Reference}
+\label{class_subject}\index{Subject@{Subject}}
+}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_subject_a196844631f87b9011b62ab4fceb0af7d}{void {\bfseries Save\-\_\-\-Subject} ()}\label{class_subject_a196844631f87b9011b62ab4fceb0af7d}
+
+\item 
+\hypertarget{class_subject_ac45971e427d4c74803136801ef65e534}{void {\bfseries Load\-\_\-\-Subject} ()}\label{class_subject_ac45971e427d4c74803136801ef65e534}
+
+\item 
+\hypertarget{class_subject_ad748d91396246aa911d168c4c8ae685a}{void {\bfseries set\-\_\-\-Class\-\_\-\-Name} (String Class\-Name)}\label{class_subject_ad748d91396246aa911d168c4c8ae685a}
+
+\item 
+\hypertarget{class_subject_a8a583b80219ebe829a583b69c3b42ad4}{void {\bfseries set\-\_\-\-Credit\-\_\-\-Hours} (int Credit\-\_\-\-Hours)}\label{class_subject_a8a583b80219ebe829a583b69c3b42ad4}
+
+\item 
+void \hyperlink{class_subject_a3c000c62bd8009745affbd20c8a56406}{add\-\_\-\-Category} (String Name, double Weight)
+\item 
+\hypertarget{class_subject_a04d4c2b3a81eccef3be0ebc2a27923fd}{void {\bfseries remove\-\_\-\-Category} (int index)}\label{class_subject_a04d4c2b3a81eccef3be0ebc2a27923fd}
+
+\item 
+boolean \hyperlink{class_subject_a81f659adf6b36de9e14967e7af1c9d51}{is\-\_\-complete} ()
+\item 
+\hypertarget{class_subject_a959349e4415ef1034c133c1df4b673d4}{String {\bfseries get\-\_\-\-Subject\-\_\-\-Name} ()}\label{class_subject_a959349e4415ef1034c133c1df4b673d4}
+
+\item 
+\hypertarget{class_subject_a4fcd2cbf9fb848d36b4ff10c340d1f31}{int {\bfseries get\-\_\-\-Credit\-\_\-\-Hours} ()}\label{class_subject_a4fcd2cbf9fb848d36b4ff10c340d1f31}
+
+\item 
+\hypertarget{class_subject_afe4fbca6c4ba60f116b8624ebb938451}{int {\bfseries get\-\_\-\-Category\-\_\-\-Count} ()}\label{class_subject_afe4fbca6c4ba60f116b8624ebb938451}
+
+\item 
+\hypertarget{class_subject_a76bcd6c2b287551978bcc123fdbd5d96}{\hyperlink{class_categories}{Categories} {\bfseries get\-\_\-\-Category} (int i)}\label{class_subject_a76bcd6c2b287551978bcc123fdbd5d96}
+
+\item 
+double \hyperlink{class_subject_ac0fee3b13cce262f5a63d4c984eb2ac6}{get\-\_\-\-Percent\-\_\-\-Complete} ()
+\item 
+double \hyperlink{class_subject_ae6d10e532321fc7fa0cb7be73053ae67}{Calculate\-\_\-\-Grade} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Subject.\-java
+
+\begin{DoxyAuthor}{Author}
+Shane Sarnac, Fadhil Suhendi, Dan Wallin 
+
+ 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+Originally created\-: 10/19/2014  Modified on\-: 12/2/2014 (added self-\/documenting code)
+\end{DoxyDate}
+
+
+\hypertarget{index_desc}{}\subsection{Description}\label{index_desc}
+This files is used to create a \hyperlink{class_subject}{Subject} Class, add weights and calculate total grade for that subject. 
+
+\subsection{Member Function Documentation}
+\hypertarget{class_subject_a3c000c62bd8009745affbd20c8a56406}{\index{Subject@{Subject}!add\-\_\-\-Category@{add\-\_\-\-Category}}
+\index{add\-\_\-\-Category@{add\-\_\-\-Category}!Subject@{Subject}}
+\subsubsection[{add\-\_\-\-Category}]{\setlength{\rightskip}{0pt plus 5cm}void Subject.\-add\-\_\-\-Category (
+\begin{DoxyParamCaption}
+\item[{String}]{Name, }
+\item[{double}]{Weight}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_subject_a3c000c62bd8009745affbd20c8a56406}
+This method creates a \hyperlink{class_categories}{Categories} class given the Name and weight of said category. It then adds this Category to the the list of other categories. 
+\begin{DoxyParams}{Parameters}
+{\em Weight} & the percentage weight of the category \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_subject_ae6d10e532321fc7fa0cb7be73053ae67}{\index{Subject@{Subject}!Calculate\-\_\-\-Grade@{Calculate\-\_\-\-Grade}}
+\index{Calculate\-\_\-\-Grade@{Calculate\-\_\-\-Grade}!Subject@{Subject}}
+\subsubsection[{Calculate\-\_\-\-Grade}]{\setlength{\rightskip}{0pt plus 5cm}double Subject.\-Calculate\-\_\-\-Grade (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_subject_ae6d10e532321fc7fa0cb7be73053ae67}
+This method utilizes a for loop to calculate the total grade in a given subject. \begin{DoxyReturn}{Returns}
+Returns overall grade for the subject 
+\end{DoxyReturn}
+\hypertarget{class_subject_ac0fee3b13cce262f5a63d4c984eb2ac6}{\index{Subject@{Subject}!get\-\_\-\-Percent\-\_\-\-Complete@{get\-\_\-\-Percent\-\_\-\-Complete}}
+\index{get\-\_\-\-Percent\-\_\-\-Complete@{get\-\_\-\-Percent\-\_\-\-Complete}!Subject@{Subject}}
+\subsubsection[{get\-\_\-\-Percent\-\_\-\-Complete}]{\setlength{\rightskip}{0pt plus 5cm}double Subject.\-get\-\_\-\-Percent\-\_\-\-Complete (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_subject_ac0fee3b13cce262f5a63d4c984eb2ac6}
+This method sums the percent weight of the subject that the user has entered so far. \begin{DoxyReturn}{Returns}
+The total percentage weight of the subject so far 
+\end{DoxyReturn}
+\hypertarget{class_subject_a81f659adf6b36de9e14967e7af1c9d51}{\index{Subject@{Subject}!is\-\_\-complete@{is\-\_\-complete}}
+\index{is\-\_\-complete@{is\-\_\-complete}!Subject@{Subject}}
+\subsubsection[{is\-\_\-complete}]{\setlength{\rightskip}{0pt plus 5cm}boolean Subject.\-is\-\_\-complete (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_subject_a81f659adf6b36de9e14967e7af1c9d51}
+This method is used to determine whether or not the total weight of the subject has reached 100 percent. \begin{DoxyReturn}{Returns}
+returns either true or false depending on whether the weight is at 100 or not. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+Subject.\-java\end{DoxyCompactItemize}
