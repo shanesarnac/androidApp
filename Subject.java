@@ -98,7 +98,7 @@ public class Subject {
 	
 	/**
 	 * This method sums the percent weight of the subject that the user has entered so far.
-	 * @return sum the total percentage weight of the subject so far
+	 * @return The total percentage weight of the subject so far
 	 * */
 	public double get_Percent_Complete()
 	{
@@ -113,7 +113,7 @@ public class Subject {
 	
 	/**
 	 * This method utilizes a for loop to calculate the total grade in a given subject.
-	 * @return grade returns overall grade for the subject
+	 * @return Returns overall grade for the subject
 	 * */
 	public double Calculate_Grade() 
 	{

@@ -1,4 +1,15 @@
-
+/** Assignments.java
+ * 
+ *  @author Shane Sarnac, Fadhil Suhendi, Dan Wallin
+ *  <hr> 									
+ *  @date Originally created: 10/19/2014 									
+ *  @modified Modified on: 12/4/2014 (added self-documenting code)
+ * 	
+ *  <hr>
+ * 
+ *  @section desc Description
+ *  The Assignments class is used in order to set points possible and available points for a given assignment. 
+ */ 
 
 public class Assignments {
 	String title;
@@ -28,6 +39,10 @@ public class Assignments {
 		this.points_possible = Points_Possible;
 	}
 	
+	
+	/**
+	 * This method sets an assignment to be completed only after it has been assigned point values.
+	 */
 	public void set_Complete(boolean Complete)
 	{
 		this.complete = Complete;
@@ -48,6 +63,9 @@ public class Assignments {
 		return this.points_possible;
 	}
 	
+	/**
+	 * This method checks to make sure that the assignment has been assigned points earned and points available.
+	 */
 	public boolean is_Complete()
 	{
 		return complete;
