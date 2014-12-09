@@ -18,7 +18,7 @@ public class Subject {
 	private int credit_hours;
 	private int category_count;
 	private LinkedList<Categories> categories = new LinkedList<Categories>();
-	private LinkedList<Schedule> schedule = new LinkedList<Schedule>();
+	//private LinkedList<Schedule> schedule = new LinkedList<Schedule>();
 	
 	public Subject()
 	{

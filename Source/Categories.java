@@ -102,4 +102,14 @@ public class Categories {
 	{
 		return total_points_earned/total_points_possible;
 	}
+	
+	public int get_Assignment_Count()
+	{
+		return assignment_count;
+	}
+	
+	public Assignments get_Assignment(int index)
+	{
+		return assignments.get(index);
+	}
 }
